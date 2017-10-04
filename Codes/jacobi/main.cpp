@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) //code to find eigenvalues and eigenvectors of 
     int method; //0 bf // 1 cyc
     double omega; //define omega in the harmonic potential
 
-    if (argc<=7){
+    if (argc<=8){
              cout <<"You forgot something: you have to insert n (int, number of mesh points); loop (int, number of general loop's repetions, to perform one loop insert 2); "
                     "rho_min (double), rho_max (double), interacting (int, 0 if you want non-interacting case, 1 if you want the interacting one),"
                     "eps (double, tolerance), method (int, 0 if you want brute-force Jacobi, 1 if you want cyclic jacobi),"
