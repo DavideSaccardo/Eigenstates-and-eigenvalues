@@ -87,7 +87,7 @@ set(gca, 'FontName', 'Times');
 grid on;
 xlim([0 50]);
 plot([19.3 19.3],[0 0.08],'m');
-ll=legend(gca,'show','ground state $\psi_0$','first state $\psi_1$','second state $\psi_2$','$\rho_{node}=19.3$ of $\psi_1$','location','northeast');
+ll=legend(gca,'show','ground state $\psi_1$','first state $\psi_2$','second state $\psi_3$','$\rho_{node}=19.3$ of $\psi_2$','location','northeast');
 set(ll,'Interpreter','latex');
 
 %% armonic oscillator 
@@ -152,7 +152,7 @@ plot(rhoC,pdf1C,'.');
 %plot(rhoD,pdf1D,'.');
 title({'Interacting solutions';'Probability density functions of the ground state';'with three values of \omega_r'},'Interpreter','teX','Fontsize',18);
 xlabel('$\rho$','interpreter','latex','fontsize',18);
-ylabel('$|\psi(\rho)|^2$','interpreter','latex','fontsize',18);
+ylabel('$|\psi_1(\rho)|^2$','interpreter','latex','fontsize',18);
 set(gca,'TickLabelInterpreter','tex');
 set(gca,'FontSize',18);
 set(gca, 'FontName', 'Times');
@@ -262,11 +262,11 @@ set(ll,'Interpreter','Latex');
 figure()
 plot(r_iA,pdf1A./trapz(r_iA,pdf1A),'r.'); xlim([0 0.5]); ylim([0 8.5]); ...
     hold on; plot(r_oA,pdf1E./trapz(r_oA,pdf1E),'b.'); 
-tt=title('Eigenstate $\psi_0,\;l=0$; $\omega_r = 5$')
+tt=title('Eigenstate $\psi_1,\;l=0$; $\omega_r = 5$')
 set(tt,'Interpreter','Latex','Fontsize',14);
 
 xlabel('$r$ [nm]','interpreter','latex','fontsize',12);
-ylabel('$|\psi(r)|^2$','interpreter','latex','fontsize',12);
+ylabel('$|\psi_1(r)|^2$','interpreter','latex','fontsize',12);
 set(gca,'TickLabelInterpreter','latex');
 set(gca,'FontSize',12);
 set(gca, 'FontName', 'Times');
@@ -281,10 +281,10 @@ figure()
 %subplot(2,2,2); 
 plot(r_iB,pdf1B./trapz(r_iB,pdf1B),'r.'); xlim([0 0.9]); ylim([0 4]); ...
     hold on; plot(r_oB,pdf1E./trapz(r_oB,pdf1E),'b.'); 
-title('Eigenstate $\psi_0,\;l=0$; $\omega_r = 1$','Interpreter','LateX','Fontsize',14);
+title('Eigenstate $\psi_1,\;l=0$; $\omega_r = 1$','Interpreter','LateX','Fontsize',14);
 
 xlabel('$r$ [nm]','interpreter','latex','fontsize',12);
-ylabel('$|\psi(r)|^2$','interpreter','latex','fontsize',12);
+ylabel('$|\psi_1(r)|^2$','interpreter','latex','fontsize',12);
 set(gca,'TickLabelInterpreter','latex');
 set(gca,'FontSize',12);
 set(gca, 'FontName', 'Times');
@@ -297,10 +297,10 @@ grid on;
 figure()
 plot(r_iC,pdf1C./trapz(r_iC,pdf1C),'r.'); xlim([0 1.5]); ylim([0 3.2]);  ...
     hold on; plot(r_oC,pdf1E./trapz(r_oC,pdf1E),'b.'); 
-title('Eigenstate $\psi_0,\;l=0$; $\omega_r = 0.5$','Interpreter','LateX','Fontsize',14);
+title('Eigenstate $\psi_1,\;l=0$; $\omega_r = 0.5$','Interpreter','LateX','Fontsize',14);
 
 xlabel('$r$ [nm]','interpreter','latex','fontsize',12);
-ylabel('$|\psi(r)|^2$','interpreter','latex','fontsize',12);
+ylabel('$|\psi_1(r)|^2$','interpreter','latex','fontsize',12);
 set(gca,'TickLabelInterpreter','latex');
 set(gca,'FontSize',12);
 set(gca, 'FontName', 'Times');
@@ -314,9 +314,9 @@ figure()
 plot(r_iD,pdf1D./trapz(r_iD,pdf1D),'r.'); ...
     hold on; plot(r_oD,pdf1E./trapz(r_oD,pdf1E),'b.'); ylim([0 0.4]);
 xlim([0 11])
-title('Eigenstate $\psi_0,\;l=0$; $\omega_r = 0.01$','Interpreter','LateX','Fontsize',14);
+title('Eigenstate $\psi_1,\;l=0$; $\omega_r = 0.01$','Interpreter','LateX','Fontsize',14);
 xlabel('$r$ [nm]','interpreter','latex','fontsize',12);
-ylabel('$|\psi(r)|^2$','interpreter','latex','fontsize',12);
+ylabel('$|\psi_1(r)|^2$','interpreter','latex','fontsize',12);
 set(gca,'TickLabelInterpreter','latex');
 set(gca,'FontSize',12);
 set(gca, 'FontName', 'Times');
