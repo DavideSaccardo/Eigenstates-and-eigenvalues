@@ -6,7 +6,8 @@ CONFIG -= qt
 SOURCES += \
     define_matrices.cpp \
     jacobi.cpp \
-    main.cpp
+    unit_test.cpp \
+    unit_test_main.cpp
 
 HEADERS += \
     catch.hpp \

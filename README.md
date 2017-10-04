@@ -97,8 +97,4 @@ The first 4 files are about the interacting case with with pulsations declared i
 
 To compile: c++ -o p.x main.cpp
 To run: 
-./p.x 200
-
-omega_an: it's a matlab script, which provides the analysis for the physical meaning of solutions of Schr\"odinger equation.
-We let the data (got with main.cpp) inside the folder, so you can try to run the omega_an script.
-   
+./p.x 200  
