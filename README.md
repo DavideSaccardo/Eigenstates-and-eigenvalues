@@ -20,7 +20,7 @@ main.cpp: it's the general code about finding eigenvalues. It's developed to wor
 		* omega: pulsation for harmonic potentials.
 
 Example: do you want the eigenvalues of matrix A in the interacting case using brute-force Jacobi, rho_min=0, rho_max=25, eps=1e-8, omega=0.25 for just n=200, no more n? To compile: c++ -o p.x main.cpp jacobi.cpp define_matrices.cpp	To run: 
-./p.x 200 2 0 1 1e-8 0 0.25 
+./p.x 200 2 0 25 1 1e-8 0 0.25 
 	If you want to write to a file the first eigenvalue on n or first eigenvalue on rho or the elapsed time and interations it is possible to uncomment that specific part in the program.
 
 Note: you should insert an omega even if you are in the non-interacting case, in that situation you can insert 0.

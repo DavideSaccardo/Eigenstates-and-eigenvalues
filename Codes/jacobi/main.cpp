@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) //code to find eigenvalues and eigenvectors of 
     //double rho_max
     int interacting; //flag to decide if consider interacting or non-interacting case:
                        //matrix A'll be defined as consequence
-    int eps; //define tolerance
+    double eps; //define tolerance
     int method; //0 bf // 1 cyc
     double omega; //define omega in the harmonic potential
 
