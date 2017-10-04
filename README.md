@@ -55,7 +55,7 @@ Eigenvalues
 
 Inside you can find the function jacobi.cpp, which is actually the core of the program and the fucntion define_matrices.cpp, which is responsible for creating the right matrix A depending on which case are you considering (non-interacting or interacting).
 Moreover you can find unit_test.cpp and unit_test_main.cpp. These are responsible to perform unit tests on jacobi.cpp. These tests include a comparison between the eigenvalues calculated by the program and the eigenvalues from the theory and verification of the conservation of Frobenius norm in both non-interacting and interacting case with both brute-force Jacobi and cyclic Jacobi. You have just to run these files, 
-watch out to not run together main.cpp and unit_test_main.cpp because it would be a conflict between main. To compile: c++ -o p.x unit_test_main.cpp unit_test.cpp jacobi.cpp define_matrices.cpp (only debug mode in Qt)
+watch out to not run together main.cpp and unit_test_main.cpp because it would be a conflict between main. To compile: c++ -o p.x unit_test_main.cpp unit_test.cpp jacobi.cpp define_matrices.cpp (only debug mode in Qt, it takes some time)
 
 - eigenpairs_with_lib: 
 main.cpp: it's the code, which finds eigenvalues of a matrix A using function tqli in lib.h ("Numerical recipe"). We use this to prove our results. 
@@ -84,7 +84,7 @@ Interacting case n=1000:
 3.16142
 
 To compile: c++ -o p.x main.cpp lib.cpp	
-
+ To run: ./p.x
 -omega analysis: 
 main.cpp: it's the code, which finds eigenvalues and eigenvectors of a matrix A, specialized to our analysis of the physics of the solutions of Schr\''odinger equation in the interacting case: omega[] and rho_n[] (which represents rho_max) have a set of values (and eps=1e-10) for that reasons.   
 	Imput values by terminal are:
