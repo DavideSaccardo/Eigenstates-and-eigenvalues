@@ -53,9 +53,9 @@ Eigenvalues
 2.21053
 3.17974
 
-Inside you can find the function jacobi.cpp, which is actually the core of the program and the fucntion define_matrices.cpp, which is responsible for creating the right matrix A depending on which case are you considering (non-interacting or interacting).
-Moreover you can find unit_test.cpp and unit_test_main.cpp. These are responsible to perform unit tests on jacobi.cpp. These tests include a comparison between the eigenvalues calculated by the program and the eigenvalues from the theory and verification of the conservation of Frobenius norm in both non-interacting and interacting case with both brute-force Jacobi and cyclic Jacobi. You have just to run these files, 
-watch out to not run together main.cpp and unit_test_main.cpp because it would be a conflict between main. To compile: c++ -o p.x unit_test_main.cpp unit_test.cpp jacobi.cpp define_matrices.cpp (only debug mode in Qt, it takes some time)
+Inside you can find the function jacobi.cpp, which is actually the core of the program, and the function define_matrices.cpp, which is responsible for creating the right matrix A depending on which case are you considering (non-interacting or interacting).
+Moreover you can find unit_test.cpp and unit_test_main.cpp. These perform unit tests on jacobi.cpp and define_matrices.cpp. These tests include a comparison between the eigenvalues calculated by the program and the eigenvalues from the theory and verification of the conservation of Frobenius norm in both non-interacting and interacting case with both brute-force Jacobi and cyclic Jacobi. You have just to run these files, 
+watch out to not run together main.cpp and unit_test_main.cpp because it would be a conflict between main. To compile: c++ -o p.x unit_test_main.cpp unit_test.cpp jacobi.cpp define_matrices.cpp (only debug mode in Qt, it takes some time :\ )
 
 - eigenpairs_with_lib: 
 main.cpp: it's the code, which finds eigenvalues of a matrix A using function tqli in lib.h ("Numerical recipe"). We use this to prove our results. 
@@ -86,19 +86,19 @@ Interacting case n=1000:
 To compile: c++ -o p.x main.cpp lib.cpp	
  To run: ./p.x
 -omega analysis: 
-main.cpp: it's the code, which finds eigenvalues and eigenvectors of a matrix A, specialized to our analysis of the physics of the solutions of Schr\''odinger equation in the interacting case: omega[] and rho_n[] (which represents rho_max) have a set of values (and eps=1e-10) for that reasons.   
-	Imput values by terminal are:
-	* n: number of mesh points er of points of the problem, the matrix for solving the eigenvalue problem will be (n-1)X(n-1).
-	If you want you can change the values inside omega, or rho_n[], but you need to declare still 4 or 5. If you declare less, you obtain strange values, because the element missed in the array will be filled with a random number.
-	However the values already set are the perfect one for our discussion.
+main.cpp: it's the code, which finds eigenvalues and eigenvectors of a matrix A, specialized to our analysis of the physics of the solutions of Schr\"odinger equation in the interacting case: omega[] and rho_n[] (which represents rho_max) have a set of values (and eps=1e-10) for that reasons.   
+	Input values by terminal are:
+	* n: number of mesh points of the problem, the matrix for solving the eigenvalue problem will be (n-1)X(n-1).
+	If you want you can change the values inside omega, or rho_n, but you need to declare still 4 for omega or 5 for rho_n. If you declare less, you obtain strange values, because the element missed in the array will be filled with a random number.
+	However the values already set are suitable for our discussion.
 	
 The programm creates 5 files. It fills the files following the scheme:  first column -> variable rho // second column -> eigenvalue // third column -> first eigenvector // fourth column -> second eigenvector // and so on.
-The first 4 files are about the interacting case with with pulsations declared in vector omega and rho_max declared in the first 4 elements of rho_n. The last is referencing to the non interacting case with rho_max=rho_n[4].
+The first 4 files are about the interacting case with with pulsations declared in vector omega and rho_max declared in the first 4 elements of rho_n. The last refers to the non interacting case with rho_max=rho_n[4].
 
 To compile: c++ -o p.x main.cpp
 To run: 
 ./p.x 200
 
-omega_an: it's a matlab script, which provides the analysis for the physical meaning of solutions of Sch\''odinger equation.
+omega_an: it's a matlab script, which provides the analysis for the physical meaning of solutions of Schr\"odinger equation.
 We let the data (got with main.cpp) inside the folder, so you can try to run the omega_an script.
    
