@@ -98,3 +98,5 @@ The first 4 files are about the interacting case with with pulsations declared i
 To compile: c++ -o p.x main.cpp
 To run: 
 ./p.x 200  
+
+Authors: Federico Nardi, Davide Saccardo, Lorenzo Speri.
