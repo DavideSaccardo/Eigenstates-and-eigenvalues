@@ -99,4 +99,4 @@ To compile: c++ -o p.x main.cpp
 To run: 
 ./p.x 200  
 
-Authors: Federico Nardi, Davide Saccardo, Lorenzo Speri.
+This project was realized in collaboration with Federico Nardi and Lorenzo Speri at the University of Oslo (Norway).
